@@ -1,0 +1,125 @@
+.samadhan-salat-time {
+ display: block;
+}
+.samadhan-salat-time table{
+    display: block;
+    width: 100%;
+
+
+}
+.samadhan-salat-time th
+{
+    border-style: hidden;
+    color:#0085ef !important;
+    font-family: "Atma", Sans-serif;
+    font-size: 50px !important;
+    font-weight: 600;
+    line-height: 1.1em;
+    letter-spacing: 3.2px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+
+.smdn-custom-label
+{
+    border-style: hidden;
+    color:#0085ef !important;
+    font-family: "Atma", Sans-serif;
+    font-size: 50px !important;
+    font-weight: 600;
+    line-height: 1.1em;
+    letter-spacing: 3.2px;
+    width:40%;
+}
+
+.smdn-custom-input
+{
+    border-style: hidden;
+    color:#0085ef !important;
+    font-family: "Atma", Sans-serif;
+    font-size: 50px !important;
+    font-weight: 600;
+    line-height: 1.1em;
+    letter-spacing: 3.2px;
+    margin-right: 1em;
+    width:60%;
+    clear: both;
+    float: right;
+}
+
+
+
+.samadhan-salat-time-full-screen  table{
+
+    width: 100%;
+
+
+
+}
+
+.samadhan-salat-time-full-screen  table thead{
+    width: 100%;
+
+}
+
+/*
+.samadhan-salat-time-full-screen  table thead tr th{
+    width: 50%;
+
+}
+*/
+.samadhan-salat-time-full-screen .smdn-custom-th.label { width: 60% ;}
+.samadhan-salat-time-full-screen .smdn-custom-th.data { width: 40% ;}
+
+.samadhan-salat-time-full-screen  table thead tr td{
+    width: 50%;
+
+}
+
+
+
+.samadhan-salat-time-full-screen  th
+{
+
+    color:#0085ef !important;
+    font-family: "Atma", Sans-serif;
+    font-size: 150px !important;
+    font-weight: 600;
+    line-height: 1.1em;
+    letter-spacing: 3.2px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+
+}
+
+
+.smdn-custom-label-full-screen
+{
+    border-style: hidden;
+    color:#0085ef !important;
+    font-family: "Atma", Sans-serif;
+    font-size: 100px !important;
+    font-weight: 600;
+    line-height: 1.1em;
+    letter-spacing: 3.2px;
+    padding-left: 1em;
+
+}
+
+.smdn-custom-input-full-screen
+{
+    border-style: hidden;
+    color:#0085ef !important;
+    font-family: "Atma", Sans-serif;
+    font-size: 100px !important;
+    font-weight: 600;
+    line-height: 1.1em;
+    letter-spacing: 3.2px;
+    margin-right: 1em;
+
+    clear: both;
+    float: right;
+    text-align: right;
+    padding-right: 1em;
+}
