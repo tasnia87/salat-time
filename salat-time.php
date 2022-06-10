@@ -6,11 +6,20 @@
  *
  */
 
+include_once ('includes/salat-time-post.php');
 include_once ('includes/functions.php');
 include_once ('includes/api-endpoints.php');
 include_once('includes/view.php');
 include_once('includes/view-full-screen.php');
 
+
+
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not
+* unnecessarily executed.
+*/
+
+add_action( 'init', 'salat_time_post_type', 0 );
 
 // TEST:
 // samadhan_prepare_salat_time_table();
@@ -39,6 +48,7 @@ function func_wp_vue_axios_rest_call(){
     //Return
 } // end function
 function func_salat_time(){
+    func_create_salat_time();
     func_wp_vue_axios_rest_call();
     return  salat_time_view();
     }
@@ -49,3 +59,28 @@ function func_salat_time_full(){
 }
 add_shortcode('salat_time', 'func_salat_time');
 add_shortcode('salat_time_full_screen', 'func_salat_time_full');
+
+function func_create_salat_time(){
+    // Create post object
+    $salat_post = array(
+        'post_title'    => 'Shuruq',
+        'post_content'  => "5:33am",
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type' => 'salat_times',
+    );
+
+// Insert the post into the database
+    wp_update_post( $salat_post );
+
+    $salat_post = array(
+        'post_title'    => 'Dhuhr',
+        'post_content'  => "1:30pm",
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type' => 'salat_times',
+    );
+    wp_update_post( $salat_post );
+
+
+}
