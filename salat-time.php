@@ -19,7 +19,7 @@ include_once('includes/view-full-screen.php');
 * unnecessarily executed.
 */
 
-add_action( 'init', 'salat_time_post_type', 0 );
+
 
 // TEST:
 // samadhan_prepare_salat_time_table();
@@ -61,26 +61,11 @@ add_shortcode('salat_time', 'func_salat_time');
 add_shortcode('salat_time_full_screen', 'func_salat_time_full');
 
 function func_create_salat_time(){
-    // Create post object
-    $salat_post = array(
-        'post_title'    => 'Shuruq',
-        'post_content'  => "5:33am",
-        'post_status'   => 'publish',
-        'post_author'   => 1,
-        'post_type' => 'salat_times',
-    );
-
-// Insert the post into the database
-    wp_update_post( $salat_post );
-
-    $salat_post = array(
-        'post_title'    => 'Dhuhr',
-        'post_content'  => "1:30pm",
-        'post_status'   => 'publish',
-        'post_author'   => 1,
-        'post_type' => 'salat_times',
-    );
-    wp_update_post( $salat_post );
-
-
+    func_update_time('Shuruq', '5:30 am', 1);
+    func_update_time('Dhuhr',  '1:25 pm',2);
+    func_update_time('Asr',  '5:40 pm',3);
+    func_update_time('Magrib',  '7:10 pm',4);
+    func_update_time('Eisha',  '9:30 pm',5);
 }
+
+

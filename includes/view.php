@@ -14,8 +14,8 @@ function salat_time_view(){
             <tbody>
 
             <tr v-if="info!==null" v-for="data in info.data">
-                <td class="smdn-custom-label">{{data.Salat}}</td>
-                <td><input v-model="data.Iqamah" @change="saveChanges" class="smdn-custom-input" size="8" ></td>
+                <td class="smdn-custom-label">{{data.post_title}}</td>
+                <td><input v-model="data.post_content" @change="saveChanges" class="smdn-custom-input" size="8" ></td>
             </tr>
             </tbody>
         </table>

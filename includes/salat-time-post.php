@@ -2,6 +2,7 @@
 /*
 * Creating a function to create our CPT
 */
+add_action( 'init', 'salat_time_post_type', 0 );
 
 function salat_time_post_type() {
 
@@ -29,7 +30,7 @@ function salat_time_post_type() {
         'description'         => 'Salat Time news and reviews',
         'labels'              => $labels,
         // Features this CPT supports in Post Editor
-        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+        'supports'            => array( 'title', 'editor',  'author', 'thumbnail', 'revisions', 'page-attributes' ),
         // You can associate this CPT with a taxonomy or custom taxonomy.
         'taxonomies'          => array( 'genres' ),
         /* A hierarchical CPT is like Pages and can have
@@ -43,6 +44,7 @@ function salat_time_post_type() {
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
         'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-calendar-alt',
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => false,
@@ -55,4 +57,20 @@ function salat_time_post_type() {
     // Registering your Custom Post Type
     register_post_type( 'salat_times', $args );
 
+}
+
+function func_update_time($title, $time, $display_order){
+    $Shuruk = get_posts(array('post_type'=>'salat_times','title'=>$title));
+
+    if(empty($Shuruk)) {
+        $Shuruk = array(
+            'post_title' => $title,
+            'post_content' => $time,
+            'menu_order' => $display_order,
+            'post_status' => 'publish',
+            'post_author' => 1,
+            'post_type' => 'salat_times',
+        );
+        wp_insert_post( $Shuruk );
+    }
 }
