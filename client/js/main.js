@@ -62,7 +62,7 @@ var app=new Vue({
 
      },
     mounted () {
-
        this.loadData();
+        setTimeout(this.loadData, 5*60*1000);
     }
 })

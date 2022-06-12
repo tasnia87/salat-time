@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Salat Time Wall
  * Description: A plug to create a Satal Timetable for Wall TV
- * Version : 1.0.2
+ * Version : 2.0.0
  * Author: Fazlur Khan
  * Author URI: https://samadhan.com.au
  *
