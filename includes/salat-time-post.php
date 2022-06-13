@@ -10,7 +10,7 @@ class TimeKeeper
 
 
 
-    function define_salat_time_post_type()
+    public static function define_salat_time_post_type()
     {
 
         // Set UI labels for Custom Post Type
@@ -66,7 +66,7 @@ class TimeKeeper
 
     }
 
-    function create_initial_time($title, $time, $display_order)
+    public static function create_initial_time($title, $time, $display_order)
     {
 
         $record = get_page_by_title($title, OBJECT, 'salat_times');
@@ -85,11 +85,11 @@ class TimeKeeper
     }
 
     public static function create_initial_salat_times(){
-        self::create_initial_time('Shuruq', '5:30 am', 1);
-        self::create_initial_time('Dhuhr',  '1:25 pm',2);
-        self::create_initial_time('Asr',  '5:40 pm',3);
-        self::create_initial_time('Magrib',  '7:10 pm',4);
-        self::create_initial_time('Eisha',  '9:30 pm',5);
+        TimeKeeper::create_initial_time('Shuruq', '5:30 am', 1);
+        TimeKeeper::create_initial_time('Dhuhr',  '1:25 pm',2);
+        TimeKeeper::create_initial_time('Asr',  '5:40 pm',3);
+        TimeKeeper::create_initial_time('Magrib',  '7:10 pm',4);
+        TimeKeeper::create_initial_time('Eisha',  '9:30 pm',5);
     }
 }
 
