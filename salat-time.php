@@ -19,9 +19,9 @@
 
 use SalatTimes\TimeKeeper;
 
-include_once ('includes/salat-time-post.php');
-include_once ('includes/functions.php');
-include_once ('includes/api-endpoints.php');
+include_once('includes/salat-time-post.php');
+include_once('includes/functions.php');
+include_once('includes/api-endpoints.php');
 include_once('includes/view.php');
 include_once('includes/view-full-screen.php');
 

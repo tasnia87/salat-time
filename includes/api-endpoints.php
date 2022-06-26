@@ -17,7 +17,7 @@ class API
     }
 
 
-    function IsAuthorized()
+    public static function IsAuthorized()
     {
         //return true;
 
@@ -31,7 +31,7 @@ class API
 
     }
 
-    function get_salat_times()
+    public static function get_salat_times()
     {
          if(self::IsAuthorized()) {
                 $salat_times = get_posts(array('orderby' => 'menu_order', 'order' => 'ASC', 'post_type' => 'salat_times', 'posts_per_page' => 10));
@@ -64,7 +64,7 @@ class API
 
     }
 
-    function update_time($title, $time)
+    public static function update_time($title, $time)
     {
         $salat_time = get_page_by_title($title, OBJECT, 'salat_times');
         $salat_time->post_content = $time;
